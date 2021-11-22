@@ -32,7 +32,7 @@ function showNotes(){
         <div class="card-body">
           <h5 class="card-title">Note ${index +1}</h5>
           <p class="card-text">${element}</p>
-          <button href="#" class="btn btn-primary">Delete note</button>
+          <button class="btn btn-primary"  id= "dltButton">Delete note</button>
         </div>
       </div>
       `
@@ -42,3 +42,22 @@ function showNotes(){
         notesEle.innerHTML = html;
     }
 }
+
+
+
+let dltButton = document.getElementById("dltButton");
+dltButton.addEventListener("click", function dltNote(){
+    let html = "";
+   
+        html -= `
+        <div class="card my-2 mx-2 noteCard" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Note ${index +1}</h5>
+          <p class="card-text">${element}</p>
+          <button class="btn btn-primary"  id= "dltButton">Delete note</button>
+        </div>
+      </div>
+      `
+    
+});
+    
